@@ -163,3 +163,23 @@ document.addEventListener("keydown", (event) => {
     }
 
 });
+
+const music = document.getElementById("truckMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+musicBtn.addEventListener("click", () => {
+
+    if (music.paused) {
+        music.play();
+
+        musicBtn.innerHTML = "⏸ PAUSE MUSIC";
+        musicBtn.classList.add("playing");
+
+    } else {
+        music.pause();
+
+        musicBtn.innerHTML = "🎵 PLAY MUSIC";
+        musicBtn.classList.remove("playing");
+    }
+
+});
