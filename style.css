@@ -1,1154 +1,938 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: #15110c;
-  color: #f5e6c8;
-  font-family: "Roboto Condensed", sans-serif;
-  overflow-x: hidden;
+    background: #111;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    overflow-x: hidden;
 }
 
-/* ================= VARIABLES ================= */
 
-:root {
-  --cream: #f5e6c8;
-  --yellow: #f2b632;
-  --red: #c83b24;
-  --dark-red: #701c15;
-  --black: #15110c;
-  --brown: #3b2415;
-  --green: #39452b;
-}
+/* =========================================
+   NAVBAR
+========================================= */
 
-/* ================= HEADER ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 76px;
+    width: 100%;
+    height: 76px;
 
-  padding: 0 6%;
+    z-index: 1000;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  background: rgba(21, 17, 12, 0.94);
+    padding: 0 6%;
 
-  border-bottom: 2px solid var(--yellow);
+    background: rgba(10, 10, 10, 0.9);
 
-  z-index: 1000;
+    border-bottom: 2px solid #e79b19;
+
+    backdrop-filter: blur(12px);
 }
 
 .logo {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
-  color: var(--yellow);
-  letter-spacing: 2px;
+    font-family: "Anton", sans-serif;
+
+    font-size: 27px;
+    letter-spacing: 2px;
+
+    color: #f4c542;
 }
 
 .logo span {
-  margin-right: 7px;
+    margin-right: 6px;
 }
 
-nav {
-  display: flex;
-  gap: 30px;
+.logo b {
+    color: #e84b22;
 }
 
-nav a {
-  color: var(--cream);
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: 0.3s;
+.navbar nav {
+    display: flex;
+    gap: 35px;
 }
 
-nav a:hover {
-  color: var(--yellow);
-}
-
-.hamburger {
-  display: none;
-  background: none;
-  border: 0;
-  color: var(--yellow);
-  font-size: 28px;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-  min-height: 100vh;
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  padding: 120px 7% 70px;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(21,17,12,.96) 0%,
-      rgba(21,17,12,.78) 42%,
-      rgba(21,17,12,.20) 100%
-    ),
-    url("truck-hero.jpg");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-content {
-  width: 50%;
-  position: relative;
-  z-index: 2;
-
-  animation: heroIn 1s ease forwards;
-}
-
-.truck-sign {
-  display: inline-block;
-
-  background: var(--yellow);
-  color: #111;
-
-  padding: 8px 18px;
-
-  font-family: "Permanent Marker", cursive;
-
-  transform: rotate(-2deg);
-
-  margin-bottom: 20px;
-}
-
-.small-title {
-  color: var(--yellow);
-  font-weight: 900;
-  letter-spacing: 3px;
-  font-size: 13px;
-}
-
-.hero h1 {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: clamp(90px, 13vw, 190px);
-
-  line-height: .72;
-
-  margin: 25px 0;
-
-  letter-spacing: 2px;
-}
-
-.hero h1 span {
-  display: block;
-}
-
-.hero h1 strong {
-  color: var(--yellow);
-  display: block;
-  font-weight: normal;
-
-  text-shadow:
-    5px 5px 0 var(--red);
-}
-
-.hero-text {
-  max-width: 520px;
-
-  font-size: 19px;
-  line-height: 1.6;
-
-  color: #e4d5ba;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.btn {
-  text-decoration: none;
-
-  padding: 15px 24px;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-
-  transition: .3s;
-
-  display: inline-block;
-}
-
-.primary {
-  background: var(--yellow);
-  color: #17110b;
-}
-
-.secondary {
-  border: 2px solid var(--cream);
-  color: var(--cream);
-}
-
-.btn:hover {
-  transform: translateY(-4px);
-}
-
-.primary:hover {
-  background: var(--red);
-  color: white;
-}
-
-.secondary:hover {
-  background: var(--cream);
-  color: #111;
-}
-
-.hero-truck {
-  display: none;
-}
-
-/* ================= ROAD STRIP ================= */
-
-.road-strip {
-  min-height: 62px;
-
-  background: var(--red);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  gap: 20px;
-
-  padding: 12px 5%;
-
-  overflow: hidden;
-
-  border-top: 4px solid var(--yellow);
-  border-bottom: 4px solid var(--yellow);
-
-  font-family: "Permanent Marker", cursive;
-
-  font-size: 14px;
-}
-
-.road-strip div {
-  white-space: nowrap;
-}
-
-/* ================= SECTIONS ================= */
-
-.section {
-  padding: 110px 7%;
-}
-
-.section-heading {
-  margin-bottom: 55px;
-}
-
-.section-heading p {
-  color: var(--yellow);
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-
-  font-size: 13px;
-}
-
-.section-heading h2 {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: clamp(55px, 8vw, 105px);
-
-  line-height: .85;
-
-  margin-top: 15px;
-}
-
-.section-heading h2 span {
-  display: block;
-  color: var(--yellow);
-}
-
-.line {
-  width: 100px;
-  height: 7px;
-
-  margin-top: 25px;
-
-  background: var(--red);
-}
-
-/* ================= TRUCK GRID ================= */
-
-.truck-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-}
-
-.truck-card {
-  background: #21180f;
-
-  border: 2px solid #5e4529;
-
-  transition: .4s;
-
-  overflow: hidden;
-}
-
-.truck-card:hover {
-  transform: translateY(-12px) rotate(-1deg);
-
-  border-color: var(--yellow);
-
-  box-shadow: 10px 10px 0 var(--red);
-}
-
-.card-image {
-  height: 310px;
-
-  position: relative;
-
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  filter: saturate(.85) contrast(1.08);
-
-  transition: .5s;
-}
-
-.truck-card:hover img {
-  transform: scale(1.08);
-}
-
-.card-image span {
-  position: absolute;
-
-  top: 15px;
-  left: 15px;
-
-  width: 48px;
-  height: 48px;
-
-  background: var(--yellow);
-  color: #111;
-
-  display: grid;
-  place-items: center;
-
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 25px;
-}
-
-.card-content {
-  padding: 25px;
-}
-
-.card-content h3 {
-  color: var(--yellow);
-
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 35px;
-
-  letter-spacing: 1px;
-}
-
-.card-content p {
-  margin-top: 10px;
-
-  color: #cbbda5;
-
-  line-height: 1.6;
-}
-
-/* ================= MUSIC ================= */
-
-.music-section {
-  padding: 110px 7%;
-
-  background:
-    linear-gradient(
-      rgba(50, 28, 13, .88),
-      rgba(50, 28, 13, .88)
-    ),
-    url("truck-cassette.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  border-top: 5px solid var(--yellow);
-  border-bottom: 5px solid var(--yellow);
-}
-
-.music-container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.cassette-player {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 50px;
-
-  align-items: center;
-
-  background: rgba(20, 13, 8, .88);
-
-  border: 3px solid var(--yellow);
-
-  padding: 45px;
-}
-
-/* ================= CASSETTE ================= */
-
-.cassette {
-  position: relative;
-
-  width: 100%;
-  max-width: 470px;
-
-  aspect-ratio: 1.55;
-
-  background: #e1c76f;
-
-  border: 10px solid #282018;
-
-  box-shadow:
-    0 15px 0 #0d0905;
-
-  margin: auto;
-
-  transform: rotate(-3deg);
-
-  animation: cassetteFloat 4s ease-in-out infinite;
-}
-
-.cassette-label {
-  position: absolute;
-
-  top: 25%;
-  left: 10%;
-
-  width: 80%;
-
-  padding: 18px;
-
-  background: var(--red);
-
-  color: white;
-
-  text-align: center;
-}
-
-.cassette-label small {
-  display: block;
-
-  font-size: 11px;
-
-  letter-spacing: 3px;
-}
-
-.cassette-label strong {
-  display: block;
-
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 35px;
-}
-
-.cassette-label span {
-  font-size: 12px;
-
-  font-weight: 900;
-}
-
-.reel {
-  position: absolute;
-
-  bottom: 17%;
-
-  width: 70px;
-  height: 70px;
-
-  border-radius: 50%;
-
-  background: #17120d;
-
-  border: 9px dotted #eee0ba;
-
-  display: grid;
-
-  place-items: center;
-
-  font-size: 20px;
-}
-
-.reel-left {
-  left: 13%;
-}
-
-.reel-right {
-  right: 13%;
-}
-
-/* ================= PLAYER ================= */
-
-.now-playing {
-  color: var(--yellow);
-
-  font-size: 12px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-}
-
-.player-info h3 {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 55px;
-
-  margin: 10px 0 0;
-}
-
-.player-info > p:not(.now-playing) {
-  color: #cbbda5;
-}
-
-#audioPlayer {
-  width: 100%;
-
-  margin-top: 25px;
-}
-
-.player-buttons {
-  display: flex;
-
-  gap: 15px;
-
-  margin-top: 20px;
-}
-
-.player-buttons button {
-  width: 50px;
-  height: 50px;
-
-  border: 2px solid var(--yellow);
-
-  background: transparent;
-
-  color: var(--yellow);
-
-  cursor: pointer;
-
-  font-size: 18px;
-
-  transition: .3s;
-}
-
-.player-buttons button:hover,
-.player-buttons .play {
-  background: var(--yellow);
-  color: #111;
-}
-
-/* ================= PLAYLIST ================= */
-
-.playlist {
-  margin-top: 35px;
-
-  display: grid;
-
-  gap: 10px;
-}
-
-.song {
-  width: 100%;
-
-  border: 1px solid #665033;
-
-  background: rgba(15, 10, 6, .85);
-
-  color: var(--cream);
-
-  padding: 17px 20px;
-
-  display: grid;
-
-  grid-template-columns: 45px 1fr 130px;
-
-  align-items: center;
-
-  text-align: left;
-
-  cursor: pointer;
-
-  transition: .3s;
-}
-
-.song span {
-  color: var(--yellow);
-}
-
-.song strong {
-  font-size: 17px;
-}
-
-.song small {
-  text-align: right;
-  color: #a89578;
-}
-
-.song:hover,
-.song.active {
-  background: var(--red);
-
-  border-color: var(--yellow);
-
-  transform: translateX(8px);
-}
-
-.music-note {
-  text-align: center;
-
-  margin-top: 20px;
-
-  color: #bca98c;
-
-  font-size: 13px;
-}
-
-/* ================= CATEGORIES ================= */
-
-.categories {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  border-bottom: 2px solid var(--yellow);
-}
-
-.category {
-  padding: 35px 20px;
-
-  text-align: center;
-
-  background: var(--brown);
-
-  border-right: 1px solid #80633c;
-
-  transition: .3s;
-}
-
-.category:hover {
-  background: var(--red);
-
-  transform: translateY(-5px);
-}
-
-.category span {
-  display: block;
-
-  font-size: 35px;
-
-  margin-bottom: 10px;
-}
-
-.category strong {
-  display: block;
-
-  font-family: "Bebas Neue", sans-serif;
-
-  color: var(--yellow);
-
-  font-size: 27px;
-}
-
-.category small {
-  color: #c5b393;
-
-  letter-spacing: 2px;
-}
-
-/* ================= DHABA ================= */
-
-.dhaba {
-  display: grid;
-
-  grid-template-columns: 1.1fr .9fr;
-
-  gap: 70px;
-
-  align-items: center;
-}
-
-.dhaba-image {
-  height: 550px;
-
-  border: 8px solid var(--yellow);
-
-  overflow: hidden;
-
-  box-shadow: 15px 15px 0 var(--red);
-}
-
-.dhaba-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: .6s;
-}
-
-.dhaba-image:hover img {
-  transform: scale(1.06);
-}
-
-.dhaba-content > p:first-child {
-  color: var(--yellow);
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-}
-
-.dhaba-content h2 {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: clamp(55px, 7vw, 95px);
-
-  line-height: .85;
-
-  margin-top: 20px;
-}
-
-.dhaba-content h2 span {
-  display: block;
-
-  color: var(--yellow);
-}
-
-.description {
-  max-width: 500px;
-
-  color: #c9b99b;
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
-  margin-top: 25px;
-}
-
-.dhaba-stats {
-  display: flex;
-
-  gap: 40px;
-
-  margin-top: 35px;
-}
-
-.dhaba-stats strong {
-  display: block;
-
-  color: var(--yellow);
-
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 45px;
-}
-
-.dhaba-stats span {
-  color: #a99677;
-
-  font-size: 11px;
-
-  letter-spacing: 2px;
-}
-
-/* ================= ABOUT ================= */
-
-.about {
-  padding: 130px 7%;
-
-  text-align: center;
-
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #3b2415,
-      #3b2415 10px,
-      #422917 10px,
-      #422917 20px
-    );
-
-  border-top: 5px solid var(--yellow);
-}
-
-.about-inner {
-  max-width: 850px;
-
-  margin: auto;
-}
-
-.about-inner > p:first-child {
-  color: var(--yellow);
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-}
-
-.about h2 {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: clamp(70px, 10vw, 140px);
-
-  line-height: .8;
-
-  margin: 25px 0;
-}
-
-.about h2 span {
-  color: var(--yellow);
-
-  display: block;
-
-  text-shadow: 5px 5px var(--red);
-}
-
-.about-text {
-  max-width: 700px;
+.navbar nav a {
+    color: white;
+    text-decoration: none;
 
-  margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
 
-  font-size: 19px;
-
-  line-height: 1.7;
-
-  color: #dfceb0;
-}
-
-.horn {
-  display: inline-block;
-
-  margin-top: 45px;
-
-  padding: 15px 25px;
-
-  border: 4px solid var(--yellow);
-
-  background: var(--red);
-
-  font-family: "Permanent Marker", cursive;
-
-  font-size: 22px;
-
-  transform: rotate(-3deg);
-}
-
-.horn span {
-  color: var(--yellow);
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-  padding: 55px 7% 25px;
-
-  text-align: center;
-
-  background: #0e0a06;
-}
-
-.footer-logo {
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size: 35px;
-
-  color: var(--yellow);
-
-  letter-spacing: 2px;
-}
-
-footer p {
-  margin-top: 10px;
-
-  color: #99886e;
-
-  font-size: 13px;
-
-  letter-spacing: 2px;
-}
-
-.footer-bottom {
-  margin-top: 35px;
-
-  padding-top: 20px;
-
-  border-top: 1px solid #443525;
-
-  color: #6e604e;
-
-  font-size: 11px;
-}
-
-/* ================= ANIMATIONS ================= */
-
-@keyframes heroIn {
-
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
+    transition: 0.3s;
 }
-
-@keyframes cassetteFloat {
 
-  0%, 100% {
-    transform: rotate(-3deg) translateY(0);
-  }
-
-  50% {
-    transform: rotate(1deg) translateY(-10px);
-  }
-
+.navbar nav a:hover {
+    color: #f4c542;
 }
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 900px) {
-
-  nav {
-    position: absolute;
-
-    top: 76px;
-    right: 0;
-
-    width: 100%;
-
-    padding: 25px;
-
-    background: #15110c;
-
-    border-bottom: 2px solid var(--yellow);
 
+.menu-btn {
     display: none;
 
-    flex-direction: column;
+    background: transparent;
+    color: white;
 
-    text-align: center;
+    border: none;
 
-    gap: 22px;
-  }
+    font-size: 28px;
 
-  nav.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hero {
-    min-height: 850px;
-
-    padding: 130px 7% 60px;
-
-    align-items: flex-start;
-
-    background-position: 65% center;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: clamp(85px, 23vw, 150px);
-  }
-
-  .hero-text {
-    max-width: 450px;
-  }
-
-  .truck-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cassette-player {
-    grid-template-columns: 1fr;
-
-    padding: 25px;
-  }
-
-  .categories {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .dhaba {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
-  .dhaba-image {
-    height: 400px;
-  }
-
+    cursor: pointer;
 }
 
-@media (max-width: 600px) {
 
-  .header {
-    padding: 0 5%;
-  }
+/* =========================================
+   HERO
+========================================= */
 
-  .logo {
-    font-size: 24px;
-  }
+.hero {
+    position: relative;
 
-  .hero {
-    min-height: 780px;
-  }
-
-  .small-title {
-    font-size: 10px;
-  }
-
-  .truck-sign {
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 90px;
-  }
-
-  .hero-text {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-
-    max-width: 260px;
-  }
-
-  .road-strip {
-    justify-content: flex-start;
+    min-height: 100vh;
 
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+}
+
+
+/* TRUCK IMAGE */
+
+.truck-photo {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+}
+
+.truck-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    animation: truckZoom 14s ease-in-out infinite alternate;
+}
+
+
+/* IMAGE ZOOM */
+
+@keyframes truckZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88) 0%,
+            rgba(0,0,0,0.62) 35%,
+            rgba(0,0,0,0.25) 65%,
+            rgba(0,0,0,0.45) 100%
+        );
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(620px, 90%);
+
+    margin-left: 8%;
+
+    padding-top: 80px;
+
+    animation: heroEnter 1.1s ease forwards;
+}
+
+@keyframes heroEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.small-title {
+    color: #f4c542;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(90px, 12vw, 170px);
+
+    line-height: 0.8;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        5px 5px 0 #000,
+        10px 10px 25px rgba(0,0,0,0.5);
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #f4c542;
+
+    -webkit-text-stroke: 2px #111;
+}
+
+
+.hero-content p {
+    margin-top: 35px;
+
+    max-width: 500px;
+
+    color: #eee;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.play-main,
+.explore-btn {
+
+    height: 52px;
+
+    padding: 0 28px;
+
+    border-radius: 4px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.play-main {
+    border: none;
+
+    background: #e84b22;
+
+    color: white;
+}
+
+.play-main:hover {
+    background: #ff642e;
+
+    transform: translateY(-3px);
+}
+
+.explore-btn {
+    border: 2px solid #f4c542;
+
+    color: #f4c542;
+
+    background: rgba(0,0,0,0.25);
+}
+
+.explore-btn:hover {
+    background: #f4c542;
+
+    color: #111;
+}
+
+
+/* =========================================
+   TRUCK ART
+========================================= */
+
+.truck-art {
+    position: absolute;
+
+    z-index: 6;
+
+    font-family: "Anton", sans-serif;
+
+    color: #f4c542;
+
+    font-size: clamp(25px, 3vw, 55px);
+
+    letter-spacing: 2px;
+
+    opacity: 0.8;
+
+    text-shadow:
+        3px 3px 0 #111;
+}
+
+.top-art {
+    top: 110px;
+
+    right: 6%;
+
+    transform: rotate(-4deg);
+}
+
+.bottom-art {
+    bottom: 145px;
+
+    right: 7%;
+
+    color: #e84b22;
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================================
+   MUSIC PLAYER
+========================================= */
+
+.music-player {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1100px, 90%);
+
+    min-height: 85px;
+
+    padding: 15px 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        auto
+        2fr
+        auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: rgba(12,12,12,0.92);
+
+    border: 1px solid #f4c542;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* MUSIC LEFT */
+
+.music-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.music-icon {
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e84b22;
+
+    font-size: 22px;
+
+    animation: musicPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+
+    0%,100% {
+        box-shadow: 0 0 0 0 rgba(232,75,34,0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(232,75,34,0);
+    }
+
+}
+
+.music-left small {
+    display: block;
+
+    color: #f4c542;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.music-left strong {
+    display: block;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+.music-left span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* CONTROLS */
+
+.music-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.music-controls button {
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #292929;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.music-controls button:hover {
+    background: #e84b22;
+
+    transform: scale(1.08);
+}
+
+.music-controls .main-play {
+
+    width: 48px;
+    height: 48px;
+
+    background: #f4c542;
+
+    color: #111;
+
+    font-size: 18px;
+}
+
+
+/* PROGRESS */
+
+.progress-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+#progress {
+    width: 100%;
+
+    accent-color: #f4c542;
+
+    cursor: pointer;
+}
+
+
+/* VOLUME */
+
+.volume {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #f4c542;
+}
+
+#volume {
+    width: 75px;
+
+    accent-color: #f4c542;
+}
+
+
+/* =========================================
+   VIBE SECTION
+========================================= */
+
+.vibe-section {
+
+    min-height: 600px;
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #111,
+            #111 10px,
+            #151515 10px,
+            #151515 20px
+        );
+
+    border-top: 4px solid #e84b22;
+}
+
+.section-label {
+
+    color: #e84b22;
+
     font-size: 12px;
-  }
 
-  .section,
-  .music-section {
-    padding: 80px 5%;
-  }
+    letter-spacing: 5px;
 
-  .section-heading h2 {
-    font-size: 65px;
-  }
+    font-weight: 700;
+}
 
-  .card-image {
-    height: 250px;
-  }
+.vibe-section h2 {
 
-  .cassette-player {
-    padding: 18px;
-  }
+    margin-top: 15px;
 
-  .cassette-label strong {
-    font-size: 27px;
-  }
+    font-family: "Anton", sans-serif;
 
-  .reel {
-    width: 50px;
-    height: 50px;
-  }
+    font-size: clamp(55px, 8vw, 110px);
 
-  .player-info h3 {
-    font-size: 42px;
-  }
+    line-height: 0.9;
+}
 
-  .song {
-    grid-template-columns: 35px 1fr;
+.vibe-section h2 span {
+    color: #f4c542;
+}
 
-    gap: 5px;
-  }
+.vibe-section > p {
 
-  .song small {
-    display: none;
-  }
+    max-width: 600px;
 
-  .categories {
-    grid-template-columns: 1fr 1fr;
-  }
+    margin: 30px auto 60px;
 
-  .category {
-    padding: 25px 10px;
-  }
+    color: #aaa;
 
-  .dhaba {
-    padding: 80px 5%;
-  }
+    font-size: 18px;
 
-  .dhaba-image {
-    height: 300px;
+    line-height: 1.7;
+}
 
-    box-shadow: 9px 9px 0 var(--red);
-  }
 
-  .dhaba-content h2 {
-    font-size: 65px;
-  }
+/* CARDS */
 
-  .dhaba-stats {
+.vibe-grid {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
     gap: 20px;
-  }
+}
 
-  .about {
-    padding: 90px 5%;
-  }
+.vibe-card {
 
+    padding: 40px 25px;
+
+    background: #181818;
+
+    border: 1px solid #333;
+
+    transition: 0.35s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.vibe-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #f4c542;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.35s;
+}
+
+.vibe-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #f4c542;
+}
+
+.vibe-card:hover::before {
+    transform: scaleX(1);
+}
+
+.vibe-card span {
+
+    font-size: 45px;
+}
+
+.vibe-card h3 {
+
+    margin-top: 20px;
+
+    font-family: "Anton", sans-serif;
+
+    letter-spacing: 2px;
+}
+
+.vibe-card p {
+
+    color: #999;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid #333;
+}
+
+.footer-logo {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 30px;
+
+    color: #f4c542;
+}
+
+.footer-logo span {
+    color: #e84b22;
+}
+
+footer p {
+
+    margin-top: 10px;
+
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .navbar nav {
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #111;
+
+        border-bottom: 2px solid #e79b19;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .navbar nav a {
+
+        padding: 18px 25px;
+
+        border-bottom: 1px solid #292929;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .hero {
+        min-height: 900px;
+
+        align-items: flex-start;
+    }
+
+    .truck-photo img {
+
+        object-position: 48% center;
+    }
+
+    .hero-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.88) 55%,
+                #080808 100%
+            );
+    }
+
+    .hero-content {
+
+        margin-left: 0;
+
+        width: 90%;
+
+        margin: 0 auto;
+
+        padding-top: 125px;
+    }
+
+    .hero h1 {
+
+        font-size: clamp(75px, 20vw, 120px);
+    }
+
+    .hero-content p {
+
+        font-size: 16px;
+
+        max-width: 420px;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 220px;
+    }
+
+    .truck-art {
+
+        display: none;
+    }
+
+    .music-player {
+
+        bottom: 15px;
+
+        width: 94%;
+
+        padding: 15px;
+
+        grid-template-columns: 1fr auto;
+
+        gap: 12px;
+    }
+
+    .progress-area {
+
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .volume {
+
+        display: none;
+    }
+
+    .music-left strong {
+
+        font-size: 13px;
+    }
+
+    .music-left span {
+
+        font-size: 10px;
+    }
+
+    .vibe-section {
+
+        padding: 90px 20px;
+    }
+
+    .vibe-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e84b22;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f4c542;
 }
