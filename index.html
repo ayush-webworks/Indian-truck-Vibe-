@@ -1,76 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Riwaayat | Fine Food • Fine Moments</title>
+  <title>DESI TRUCKERS • Highway Beats</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= NAVBAR ================= -->
 
 <header class="header">
 
-    <div class="nav-container">
+  <div class="logo">
+    <span>🚛</span>
+    DESI TRUCKERS
+  </div>
 
-        <a href="#home" class="logo">
-            <span>RIWAAYAT</span>
-            <small>FINE FOOD • FINE MOMENTS</small>
-        </a>
+  <nav id="nav">
+    <a href="#home">HOME</a>
+    <a href="#trucks">TRUCKS</a>
+    <a href="#music">MUSIC</a>
+    <a href="#dhaba">DHABA</a>
+    <a href="#about">ABOUT</a>
+  </nav>
 
-        <nav class="desktop-nav">
-            <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#story">Our Story</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-
-            <button class="search-btn" id="searchBtn" aria-label="Search">
-                🔍
-            </button>
-
-            <button class="cart-btn" id="cartBtn">
-                🛒
-                <span id="cartCount">0</span>
-            </button>
-
-            <button class="login-btn">
-                Login
-            </button>
-
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- MOBILE MENU -->
-
-    <div class="mobile-menu" id="mobileMenu">
-
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#story">Our Story</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-
-    </div>
+  <button class="hamburger" id="hamburger">
+    ☰
+  </button>
 
 </header>
 
@@ -79,103 +44,338 @@
 
 <section class="hero" id="home">
 
-    <div class="hero-decoration hero-circle"></div>
+  <div class="hero-overlay"></div>
 
-    <div class="hero-inner">
+  <div class="hero-content">
 
-        <!-- LEFT -->
+    <div class="truck-sign">
+      HORN OK PLEASE
+    </div>
 
-        <div class="hero-content">
+    <p class="small-title">
+      INDIAN HIGHWAY • 1990s • DESI VIBES
+    </p>
 
-            <p class="eyebrow">
-                AUTHENTIC • FRESH • BEAUTIFUL
-            </p>
+    <h1>
+      <span>ROAD</span>
+      <strong>RAJA</strong>
+    </h1>
 
-            <h1>
-                Taste that
-                <br>
-                feels like
-                <em>home.</em>
-            </h1>
+    <p class="hero-text">
+      Purane trucks. Lambe highways.
+      Cassette wale gaane.
+      Aur ek cup garam chai.
+    </p>
 
-            <p class="hero-text">
-                A modern Indian dining experience where timeless
-                flavours meet contemporary presentation.
-            </p>
+    <div class="hero-buttons">
+      <a href="#music" class="btn primary">
+        ▶ PLAY HIGHWAY MUSIC
+      </a>
 
-            <div class="hero-buttons">
+      <a href="#trucks" class="btn secondary">
+        EXPLORE TRUCKS
+      </a>
+    </div>
 
-                <a href="#menu" class="btn btn-primary">
-                    Explore Menu
-                    <span>→</span>
-                </a>
+  </div>
 
-                <a href="#story" class="btn btn-outline">
-                    Our Story
-                </a>
+  <div class="hero-truck">
 
-            </div>
+    <img
+      src="truck-hero.jpg"
+      alt="Vintage Indian truck"
+    >
 
-            <div class="hero-features">
+  </div>
 
-                <div>
-                    <span>✦</span>
-                    <p>
-                        <strong>Fresh</strong>
-                        Ingredients
-                    </p>
-                </div>
-
-                <div>
-                    <span>✦</span>
-                    <p>
-                        <strong>Authentic</strong>
-                        Flavours
-                    </p>
-                </div>
-
-                <div>
-                    <span>✦</span>
-                    <p>
-                        <strong>Made With</strong>
-                        Love
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
+</section>
 
 
-        <!-- RIGHT IMAGE -->
+<!-- ================= ROAD STRIP ================= -->
 
-        <div class="hero-image-wrap">
+<div class="road-strip">
 
-            <div class="hero-image">
+  <div>
+    🚛 HORN OK PLEASE
+  </div>
 
-                <img
-                    src="hero-chef-burger.png"
-                    alt="Chef preparing a fresh burger"
-                >
+  <div>
+    ✦ USE DIPPER AT NIGHT
+  </div>
 
-                <div class="image-overlay"></div>
+  <div>
+    🚚 BURI NAZAR WALE TERA MUH KAALA
+  </div>
 
-                <div class="fresh-badge">
+  <div>
+    ✦ KEEP DISTANCE
+  </div>
 
-                    <span>FRESH</span>
+</div>
 
-                    <strong>
-                        MADE<br>
-                        WITH LOVE
-                    </strong>
 
-                </div>
+<!-- ================= TRUCK SECTION ================= -->
 
-            </div>
+<section class="section trucks" id="trucks">
 
-        </div>
+  <div class="section-heading">
+
+    <p>THE OLD SCHOOL</p>
+
+    <h2>
+      TRUCKS THAT
+      <span>RULED THE ROADS</span>
+    </h2>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <div class="truck-grid">
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-1.jpg"
+          alt="Old Indian truck"
+        >
+
+        <span>01</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>DESI BADSHAH</h3>
+
+        <p>
+          Rang-biranga body paint, heavy chrome
+          aur peeche likha hua HORN OK PLEASE.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-2.jpg"
+          alt="Vintage Indian highway truck"
+        >
+
+        <span>02</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>HIGHWAY KING</h3>
+
+        <p>
+          Raat bhar highway par safar aur
+          cabin mein bajte purane cassette songs.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-3.jpg"
+          alt="Indian decorated truck"
+        >
+
+        <span>03</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>ROAD RANGER</h3>
+
+        <p>
+          Desi artwork, colourful lights aur
+          kilometre after kilometre ka safar.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MUSIC ================= -->
+
+<section class="music-section" id="music">
+
+  <div class="music-container">
+
+    <div class="section-heading">
+
+      <p>CASSETTE CULTURE</p>
+
+      <h2>
+        HIGHWAY
+        <span>BEATS</span>
+      </h2>
+
+      <div class="line"></div>
 
     </div>
+
+
+    <div class="cassette-player">
+
+      <div class="cassette">
+
+        <div class="cassette-label">
+
+          <small>DESI HIGHWAY</small>
+
+          <strong>
+            ROAD MIX
+          </strong>
+
+          <span>
+            SIDE A
+          </span>
+
+        </div>
+
+        <div class="reel reel-left">
+          ●
+        </div>
+
+        <div class="reel reel-right">
+          ●
+        </div>
+
+      </div>
+
+
+      <div class="player-info">
+
+        <p class="now-playing">
+          NOW PLAYING
+        </p>
+
+        <h3 id="songTitle">
+          Highway Safar
+        </h3>
+
+        <p id="artist">
+          Desi Road Mix
+        </p>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <div class="player-buttons">
+
+          <button id="prevBtn">
+            ⏮
+          </button>
+
+          <button id="playBtn" class="play">
+            ▶
+          </button>
+
+          <button id="nextBtn">
+            ⏭
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PLAYLIST -->
+
+    <div class="playlist">
+
+      <button
+        class="song active"
+        data-song="Highway Safar"
+        data-artist="Desi Road Mix"
+        data-file="songs/song1.mp3"
+      >
+        <span>01</span>
+        <strong>Highway Safar</strong>
+        <small>ROAD MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Truck Driver Beat"
+        data-artist="Highway Collection"
+        data-file="songs/song2.mp3"
+      >
+        <span>02</span>
+        <strong>Truck Driver Beat</strong>
+        <small>HIGHWAY MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Desi Dhol Highway"
+        data-artist="Punjab Road Mix"
+        data-file="songs/song3.mp3"
+      >
+        <span>03</span>
+        <strong>Desi Dhol Highway</strong>
+        <small>DANCE MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Raat Ka Safar"
+        data-artist="Night Highway"
+        data-file="songs/song4.mp3"
+      >
+        <span>04</span>
+        <strong>Raat Ka Safar</strong>
+        <small>NIGHT DRIVE</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Purani Cassette"
+        data-artist="90s Road Collection"
+        data-file="songs/song5.mp3"
+      >
+        <span>05</span>
+        <strong>Purani Cassette</strong>
+        <small>90s MIX</small>
+      </button>
+
+    </div>
+
+    <p class="music-note">
+      🎵 Apne legally-owned / licensed MP3 files ko
+      <b>songs</b> folder mein rakho.
+    </p>
+
+  </div>
 
 </section>
 
@@ -184,1122 +384,136 @@
 
 <section class="categories">
 
-    <div class="category-container">
+  <div class="category">
+    <span>🚛</span>
+    <strong>TRUCK LIFE</strong>
+    <small>ROAD STORIES</small>
+  </div>
 
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🍔</div>
-            <strong>BURGERS</strong>
-            <span>Juicy & Cheesy</span>
-        </a>
+  <div class="category">
+    <span>📻</span>
+    <strong>CASSETTE</strong>
+    <small>90s MUSIC</small>
+  </div>
 
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🍟</div>
-            <strong>FRIES</strong>
-            <span>Crispy & Golden</span>
-        </a>
+  <div class="category">
+    <span>🛣️</span>
+    <strong>HIGHWAY</strong>
+    <small>LONG DRIVES</small>
+  </div>
 
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🍕</div>
-            <strong>PIZZA</strong>
-            <span>Hot & Delicious</span>
-        </a>
-
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🥤</div>
-            <strong>DRINKS</strong>
-            <span>Chill & Refreshing</span>
-        </a>
-
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🍗</div>
-            <strong>CHICKEN</strong>
-            <span>Crispy & Spicy</span>
-        </a>
-
-        <a href="#menu" class="category-card">
-            <div class="category-icon">🍨</div>
-            <strong>DESSERTS</strong>
-            <span>Sweet Treats</span>
-        </a>
-
-    </div>
+  <div class="category">
+    <span>☕</span>
+    <strong>DHABA</strong>
+    <small>CHAI & FOOD</small>
+  </div>
 
 </section>
 
 
-<!-- ================= POPULAR PICKS ================= -->
+<!-- ================= DHABA ================= -->
 
-<section class="popular-section">
+<section class="section dhaba" id="dhaba">
 
-    <div class="section-heading">
+  <div class="dhaba-image">
 
-        <p class="section-kicker">
-            POPULAR PICKS
-        </p>
+    <img
+      src="dhaba.jpg"
+      alt="Indian highway dhaba"
+    >
 
-        <h2>
-            Our <em>bestsellers.</em>
-        </h2>
+  </div>
 
-        <p>
-            A few favourites our guests keep coming back for.
-        </p>
+  <div class="dhaba-content">
 
-    </div>
-
-
-    <div class="popular-grid">
-
-        <article class="popular-card">
-
-            <div class="popular-image">
-                <img
-                    src="Urban%20Signature%20Burger.jfif"
-                    alt="Urban Signature Burger"
-                >
-            </div>
-
-            <div class="popular-info">
-
-                <h3>Urban Signature Burger</h3>
-
-                <p>
-                    Juicy grilled patty, cheese, fresh vegetables
-                    and our signature sauce.
-                </p>
-
-                <div class="price-row">
-                    <strong>₹349</strong>
-                    <button class="add-btn" data-name="Urban Signature Burger">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="popular-card">
-
-            <div class="popular-image">
-                <img
-                    src="Loaded%20Veg%20pizza.jfif"
-                    alt="Loaded Veg Pizza"
-                >
-            </div>
-
-            <div class="popular-info">
-
-                <h3>Loaded Veg Pizza</h3>
-
-                <p>
-                    Loaded with fresh vegetables, cheese and
-                    aromatic herbs.
-                </p>
-
-                <div class="price-row">
-                    <strong>₹399</strong>
-                    <button class="add-btn" data-name="Loaded Veg Pizza">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="popular-card">
-
-            <div class="popular-image">
-                <img
-                    src="malwani%20-chicken.jfif"
-                    alt="Malwani Chicken Curry"
-                >
-            </div>
-
-            <div class="popular-info">
-
-                <h3>Malwani Chicken Curry</h3>
-
-                <p>
-                    Spicy coastal chicken curry cooked with
-                    fragrant spices.
-                </p>
-
-                <div class="price-row">
-                    <strong>₹549</strong>
-                    <button class="add-btn" data-name="Malwani Chicken Curry">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="popular-card">
-
-            <div class="popular-image">
-                <img
-                    src="Crispy%20French%20fries.jfif"
-                    alt="Crispy French Fries"
-                >
-            </div>
-
-            <div class="popular-info">
-
-                <h3>Crispy French Fries</h3>
-
-                <p>
-                    Golden crispy fries with a perfectly
-                    seasoned crunch.
-                </p>
-
-                <div class="price-row">
-                    <strong>₹149</strong>
-                    <button class="add-btn" data-name="Crispy French Fries">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
-    <a href="#menu" class="view-menu-btn">
-        View Full Menu →
-    </a>
-
-</section>
-
-
-<!-- ================= MENU ================= -->
-
-<section class="menu-section" id="menu">
-
-    <div class="menu-heading">
-
-        <p class="section-kicker">
-            RIWAAYAT MENU
-        </p>
-
-        <h2>
-            Good food,
-            <em>great moments.</em>
-        </h2>
-
-        <p>
-            Explore our carefully prepared selection of
-            Indian favourites and modern comfort food.
-        </p>
-
-    </div>
-
-
-    <!-- FILTER -->
-
-    <div class="menu-filters">
-
-        <button class="filter-btn active" data-filter="all">
-            ALL
-        </button>
-
-        <button class="filter-btn" data-filter="signature">
-            SIGNATURE
-        </button>
-
-        <button class="filter-btn" data-filter="pizza">
-            PIZZA
-        </button>
-
-        <button class="filter-btn" data-filter="burgers">
-            BURGERS
-        </button>
-
-        <button class="filter-btn" data-filter="fast-food">
-            FAST FOOD
-        </button>
-
-        <button class="filter-btn" data-filter="north-indian">
-            NORTH INDIAN
-        </button>
-
-        <button class="filter-btn" data-filter="main-course">
-            MAIN COURSE
-        </button>
-
-        <button class="filter-btn" data-filter="desserts">
-            DESSERTS
-        </button>
-
-        <button class="filter-btn" data-filter="drinks">
-            DRINKS
-        </button>
-
-    </div>
-
-
-    <!-- MENU GRID -->
-
-    <div class="menu-grid" id="menuGrid">
-
-
-        <!-- 1 -->
-
-        <article class="menu-card" data-category="signature burgers">
-
-            <div class="menu-image">
-
-                <img
-                    src="Urban%20Signature%20Burger.jfif"
-                    alt="Urban Signature Burger"
-                >
-
-                <span class="menu-tag">
-                    SIGNATURE
-                </span>
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Urban Signature Burger</h3>
-
-                <p>
-                    Juicy grilled patty, cheese, fresh vegetables
-                    and our signature sauce.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹349</strong>
-
-                    <button class="add-btn" data-name="Urban Signature Burger">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 2 -->
-
-        <article class="menu-card" data-category="signature fast-food">
-
-            <div class="menu-image">
-
-                <img
-                    src="butter%20naan.jfif"
-                    alt="Butter Naan"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Butter Naan</h3>
-
-                <p>
-                    Soft, fluffy naan finished with aromatic butter.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹79</strong>
-
-                    <button class="add-btn" data-name="Butter Naan">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 3 -->
-
-        <article class="menu-card" data-category="signature fast-food">
-
-            <div class="menu-image">
-
-                <img
-                    src="Cheese%20momos.jfif"
-                    alt="Cheese Momos"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Cheese Momos</h3>
-
-                <p>
-                    Soft steamed momos loaded with creamy cheese.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹229</strong>
-
-                    <button class="add-btn" data-name="Cheese Momos">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 4 -->
-
-        <article class="menu-card" data-category="main-course north-indian">
-
-            <div class="menu-image">
-
-                <img
-                    src="Chicken%20biryani.jfif"
-                    alt="Chicken Biryani"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Chicken Biryani</h3>
-
-                <p>
-                    Fragrant basmati rice, tender chicken and
-                    aromatic spices.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹399</strong>
-
-                    <button class="add-btn" data-name="Chicken Biryani">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 5 -->
-
-        <article class="menu-card" data-category="fast-food">
-
-            <div class="menu-image">
-
-                <img
-                    src="Chineese%20sandwich.jfif"
-                    alt="Chinese Sandwich"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Chinese Sandwich</h3>
-
-                <p>
-                    Crispy toasted sandwich with spicy
-                    Chinese-style filling.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹199</strong>
-
-                    <button class="add-btn" data-name="Chinese Sandwich">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 6 -->
-
-        <article class="menu-card" data-category="desserts">
-
-            <div class="menu-image">
-
-                <img
-                    src="Chocolate%20Ice%20Cream.jfif"
-                    alt="Chocolate Ice Cream"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Chocolate Ice Cream</h3>
-
-                <p>
-                    Rich, creamy chocolate ice cream for the
-                    perfect finish.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹179</strong>
-
-                    <button class="add-btn" data-name="Chocolate Ice Cream">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 7 -->
-
-        <article class="menu-card" data-category="drinks">
-
-            <div class="menu-image">
-
-                <img
-                    src="Creamy%20cold%20coffee.jfif"
-                    alt="Creamy Cold Coffee"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Creamy Cold Coffee</h3>
-
-                <p>
-                    Smooth, creamy and chilled coffee topped
-                    with rich cream.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹189</strong>
-
-                    <button class="add-btn" data-name="Creamy Cold Coffee">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 8 -->
-
-        <article class="menu-card" data-category="fast-food">
-
-            <div class="menu-image">
-
-                <img
-                    src="Creamy%20Tomato%20pasta.jfif"
-                    alt="Creamy Tomato Pasta"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Creamy Tomato Pasta</h3>
-
-                <p>
-                    Creamy tomato pasta tossed with herbs
-                    and parmesan.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹299</strong>
-
-                    <button class="add-btn" data-name="Creamy Tomato Pasta">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 9 -->
-
-        <article class="menu-card" data-category="fast-food">
-
-            <div class="menu-image">
-
-                <img
-                    src="Crispy%20French%20fries.jfif"
-                    alt="Crispy French Fries"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Crispy French Fries</h3>
-
-                <p>
-                    Golden crispy fries with a perfectly
-                    seasoned crunch.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹149</strong>
-
-                    <button class="add-btn" data-name="Crispy French Fries">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 10 -->
-
-        <article class="menu-card" data-category="main-course">
-
-            <div class="menu-image">
-
-                <img
-                    src="malwani%20-chicken.jfif"
-                    alt="Malwani Chicken Curry"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Malwani Chicken Curry</h3>
-
-                <p>
-                    Spicy coastal chicken curry cooked with
-                    fragrant spices.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹549</strong>
-
-                    <button class="add-btn" data-name="Malwani Chicken Curry">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 11 -->
-
-        <article class="menu-card" data-category="north-indian main-course">
-
-            <div class="menu-image">
-
-                <img
-                    src="sahi-paneer.jfif"
-                    alt="Shahi Paneer"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Shahi Paneer</h3>
-
-                <p>
-                    Soft paneer cooked in a rich creamy
-                    royal gravy.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹399</strong>
-
-                    <button class="add-btn" data-name="Shahi Paneer">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 12 -->
-
-        <article class="menu-card" data-category="desserts">
-
-            <div class="menu-image">
-
-                <img
-                    src="Rasmalai.jfif"
-                    alt="Rasmalai"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Rasmalai</h3>
-
-                <p>
-                    Soft cheese dumplings soaked in fragrant
-                    saffron milk.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹199</strong>
-
-                    <button class="add-btn" data-name="Rasmalai">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 13 -->
-
-        <article class="menu-card" data-category="desserts">
-
-            <div class="menu-image">
-
-                <img
-                    src="Rajbhog.jfif"
-                    alt="Rajbhog Ice Cream"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Rajbhog Ice Cream</h3>
-
-                <p>
-                    Royal creamy ice cream with rich nutty
-                    flavours.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹189</strong>
-
-                    <button class="add-btn" data-name="Rajbhog Ice Cream">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 14 -->
-
-        <article class="menu-card" data-category="drinks">
-
-            <div class="menu-image">
-
-                <img
-                    src="mango-shake.jfif"
-                    alt="Mango Shake"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Mango Shake</h3>
-
-                <p>
-                    Thick creamy mango shake made with
-                    fresh mangoes.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹199</strong>
-
-                    <button class="add-btn" data-name="Mango Shake">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 15 -->
-
-        <article class="menu-card" data-category="pizza">
-
-            <div class="menu-image">
-
-                <img
-                    src="Loaded%20Veg%20pizza.jfif"
-                    alt="Loaded Veg Pizza"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Loaded Veg Pizza</h3>
-
-                <p>
-                    Cheesy pizza loaded with vegetables
-                    and herbs.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹399</strong>
-
-                    <button class="add-btn" data-name="Loaded Veg Pizza">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 16 -->
-
-        <article class="menu-card" data-category="desserts">
-
-            <div class="menu-image">
-
-                <img
-                    src="lava%20cake.jpg.jfif"
-                    alt="Lava Cake"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Chocolate Lava Cake</h3>
-
-                <p>
-                    Warm chocolate cake with a rich molten
-                    centre.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹229</strong>
-
-                    <button class="add-btn" data-name="Chocolate Lava Cake">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- 17 -->
-
-        <article class="menu-card" data-category="drinks">
-
-            <div class="menu-image">
-
-                <img
-                    src="strawberry%20juice.jfif"
-                    alt="Fresh Strawberry Juice"
-                >
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>Fresh Strawberry Juice</h3>
-
-                <p>
-                    Refreshing strawberry drink prepared
-                    with fresh fruit.
-                </p>
-
-                <div class="menu-bottom">
-                    <strong>₹169</strong>
-
-                    <button class="add-btn" data-name="Fresh Strawberry Juice">
-                        +
-                    </button>
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STORY ================= -->
-
-<section class="story-section" id="story">
-
-    <div class="story-image">
-
-        <img
-            src="Chicken%20biryani.jfif"
-            alt="Riwaayat food"
-        >
-
-    </div>
-
-    <div class="story-content">
-
-        <p class="section-kicker">
-            OUR STORY
-        </p>
-
-        <h2>
-            Food with a little bit of
-            <em>riwaayat.</em>
-        </h2>
-
-        <p>
-            Riwaayat was created with one simple idea —
-            food should not only fill your stomach,
-            it should create memories.
-        </p>
-
-        <p>
-            We bring together familiar Indian flavours,
-            modern presentation and ingredients chosen
-            with care.
-        </p>
-
-        <a href="#menu" class="text-link">
-            Discover our menu →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= REVIEWS ================= -->
-
-<section class="reviews-section" id="reviews">
-
-    <div class="section-heading">
-
-        <p class="section-kicker">
-            GUEST LOVE
-        </p>
-
-        <h2>
-            Loved by people who
-            <em>love food.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="reviews-grid">
-
-        <div class="review-card">
-
-            <div class="stars">★★★★★</div>
-
-            <p>
-                “The food presentation is beautiful
-                and everything tasted absolutely fresh.”
-            </p>
-
-            <strong>— Ananya Sharma</strong>
-
-        </div>
-
-
-        <div class="review-card">
-
-            <div class="stars">★★★★★</div>
-
-            <p>
-                “The biryani and creamy pasta were amazing.
-                Definitely coming back again.”
-            </p>
-
-            <strong>— Rahul Verma</strong>
-
-        </div>
-
-
-        <div class="review-card">
-
-            <div class="stars">★★★★★</div>
-
-            <p>
-                “Beautiful ambience, delicious food and
-                really smooth service.”
-            </p>
-
-            <strong>— Priya Singh</strong>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="cta-section">
-
-    <p class="section-kicker">
-        READY TO EAT?
-    </p>
+    <p>HIGHWAY STOP</p>
 
     <h2>
-        Good food is waiting
-        <em>for you.</em>
+      EK CUP CHAI
+      <span>AUR EK LAMBA SAFAR.</span>
     </h2>
 
-    <a href="#menu" class="btn btn-light">
-        Order Now →
-    </a>
+    <div class="line"></div>
+
+    <p class="description">
+      Jab truck side mein rukta hai,
+      engine thoda thanda hota hai,
+      aur driver ke haath mein garam chai hoti hai —
+      wahi asli highway life hai.
+    </p>
+
+    <div class="dhaba-stats">
+
+      <div>
+        <strong>24/7</strong>
+        <span>HIGHWAY</span>
+      </div>
+
+      <div>
+        <strong>90s</strong>
+        <span>VIBES</span>
+      </div>
+
+      <div>
+        <strong>∞</strong>
+        <span>MILES</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="about-inner">
+
+    <p>THIS IS NOT JUST A WEBSITE.</p>
+
+    <h2>
+      THIS IS THE
+      <span>HIGHWAY.</span>
+    </h2>
+
+    <p class="about-text">
+      Indian trucking culture ka woh era,
+      jahan har truck ek moving artwork tha,
+      har cabin mein music bajta tha,
+      aur har highway ki apni ek kahani thi.
+    </p>
+
+    <div class="horn">
+      HORN
+      <span>OK</span>
+      PLEASE
+    </div>
+
+  </div>
 
 </section>
 
 
 <!-- ================= FOOTER ================= -->
 
-<footer class="footer" id="contact">
+<footer>
 
-    <div class="footer-inner">
+  <div class="footer-logo">
+    🚛 DESI TRUCKERS
+  </div>
 
-        <div class="footer-brand">
+  <p>
+    BUILT FOR THE LOVE OF INDIAN HIGHWAYS.
+  </p>
 
-            <div class="logo footer-logo">
-                <span>RIWAAYAT</span>
-                <small>FINE FOOD • FINE MOMENTS</small>
-            </div>
-
-            <p>
-                Authentic flavours, modern presentation
-                and moments worth remembering.
-            </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>Explore</h4>
-
-            <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#story">Our Story</a>
-            <a href="#reviews">Reviews</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>Contact</h4>
-
-            <span>📍 Mumbai, India</span>
-            <span>📞 +91 98765 43210</span>
-            <span>✉ hello@riwaayat.com</span>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-        <span>© 2026 Riwaayat. All rights reserved.</span>
-        <span>Made with ♥ for food lovers.</span>
-    </div>
+  <div class="footer-bottom">
+    © 2026 DESI TRUCKERS • ROAD NEVER ENDS.
+  </div>
 
 </footer>
-
-
-<!-- ================= CART PANEL ================= -->
-
-<div class="cart-overlay" id="cartOverlay"></div>
-
-<aside class="cart-panel" id="cartPanel">
-
-    <div class="cart-header">
-
-        <h3>Your Order</h3>
-
-        <button id="closeCart">
-            ×
-        </button>
-
-    </div>
-
-    <div id="cartItems" class="cart-items">
-
-        <p class="empty-cart">
-            Your cart is empty.
-        </p>
-
-    </div>
-
-    <div class="cart-footer">
-
-        <div>
-            <span>Total</span>
-            <strong id="cartTotal">₹0</strong>
-        </div>
-
-        <button class="checkout-btn">
-            Proceed to Order
-        </button>
-
-    </div>
-
-</aside>
-
-
-<!-- SEARCH -->
-
-<div class="search-overlay" id="searchOverlay">
-
-    <div class="search-box">
-
-        <button id="closeSearch">
-            ×
-        </button>
-
-        <p class="section-kicker">
-            SEARCH MENU
-        </p>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search burger, biryani, pizza..."
-        >
-
-        <div id="searchResults"></div>
-
-    </div>
-
-</div>
 
 
 <script src="script.js"></script>
