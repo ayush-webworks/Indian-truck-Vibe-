@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DESI TRUCKERS • Highway Beats</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+  <div class="logo">
+    <span>🚛</span>
+    DESI TRUCKERS
+  </div>
+
+  <nav id="nav">
+    <a href="#home">HOME</a>
+    <a href="#trucks">TRUCKS</a>
+    <a href="#music">MUSIC</a>
+    <a href="#dhaba">DHABA</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+
+  <button class="hamburger" id="hamburger">
+    ☰
+  </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="truck-sign">
+      HORN OK PLEASE
+    </div>
+
+    <p class="small-title">
+      INDIAN HIGHWAY • 1990s • DESI VIBES
+    </p>
+
+    <h1>
+      <span>ROAD</span>
+      <strong>RAJA</strong>
+    </h1>
+
+    <p class="hero-text">
+      Purane trucks. Lambe highways.
+      Cassette wale gaane.
+      Aur ek cup garam chai.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#music" class="btn primary">
+        ▶ PLAY HIGHWAY MUSIC
+      </a>
+
+      <a href="#trucks" class="btn secondary">
+        EXPLORE TRUCKS
+      </a>
+    </div>
+
+  </div>
+
+  <div class="hero-truck">
+
+    <img
+      src="truck-hero.jpg"
+      alt="Vintage Indian truck"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- ================= ROAD STRIP ================= -->
+
+<div class="road-strip">
+
+  <div>
+    🚛 HORN OK PLEASE
+  </div>
+
+  <div>
+    ✦ USE DIPPER AT NIGHT
+  </div>
+
+  <div>
+    🚚 BURI NAZAR WALE TERA MUH KAALA
+  </div>
+
+  <div>
+    ✦ KEEP DISTANCE
+  </div>
+
+</div>
+
+
+<!-- ================= TRUCK SECTION ================= -->
+
+<section class="section trucks" id="trucks">
+
+  <div class="section-heading">
+
+    <p>THE OLD SCHOOL</p>
+
+    <h2>
+      TRUCKS THAT
+      <span>RULED THE ROADS</span>
+    </h2>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <div class="truck-grid">
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-1.jpg"
+          alt="Old Indian truck"
+        >
+
+        <span>01</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>DESI BADSHAH</h3>
+
+        <p>
+          Rang-biranga body paint, heavy chrome
+          aur peeche likha hua HORN OK PLEASE.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-2.jpg"
+          alt="Vintage Indian highway truck"
+        >
+
+        <span>02</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>HIGHWAY KING</h3>
+
+        <p>
+          Raat bhar highway par safar aur
+          cabin mein bajte purane cassette songs.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="truck-card">
+
+      <div class="card-image">
+
+        <img
+          src="truck-3.jpg"
+          alt="Indian decorated truck"
+        >
+
+        <span>03</span>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>ROAD RANGER</h3>
+
+        <p>
+          Desi artwork, colourful lights aur
+          kilometre after kilometre ka safar.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MUSIC ================= -->
+
+<section class="music-section" id="music">
+
+  <div class="music-container">
+
+    <div class="section-heading">
+
+      <p>CASSETTE CULTURE</p>
+
+      <h2>
+        HIGHWAY
+        <span>BEATS</span>
+      </h2>
+
+      <div class="line"></div>
+
+    </div>
+
+
+    <div class="cassette-player">
+
+      <div class="cassette">
+
+        <div class="cassette-label">
+
+          <small>DESI HIGHWAY</small>
+
+          <strong>
+            ROAD MIX
+          </strong>
+
+          <span>
+            SIDE A
+          </span>
+
+        </div>
+
+        <div class="reel reel-left">
+          ●
+        </div>
+
+        <div class="reel reel-right">
+          ●
+        </div>
+
+      </div>
+
+
+      <div class="player-info">
+
+        <p class="now-playing">
+          NOW PLAYING
+        </p>
+
+        <h3 id="songTitle">
+          Highway Safar
+        </h3>
+
+        <p id="artist">
+          Desi Road Mix
+        </p>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <div class="player-buttons">
+
+          <button id="prevBtn">
+            ⏮
+          </button>
+
+          <button id="playBtn" class="play">
+            ▶
+          </button>
+
+          <button id="nextBtn">
+            ⏭
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PLAYLIST -->
+
+    <div class="playlist">
+
+      <button
+        class="song active"
+        data-song="Highway Safar"
+        data-artist="Desi Road Mix"
+        data-file="songs/song1.mp3"
+      >
+        <span>01</span>
+        <strong>Highway Safar</strong>
+        <small>ROAD MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Truck Driver Beat"
+        data-artist="Highway Collection"
+        data-file="songs/song2.mp3"
+      >
+        <span>02</span>
+        <strong>Truck Driver Beat</strong>
+        <small>HIGHWAY MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Desi Dhol Highway"
+        data-artist="Punjab Road Mix"
+        data-file="songs/song3.mp3"
+      >
+        <span>03</span>
+        <strong>Desi Dhol Highway</strong>
+        <small>DANCE MIX</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Raat Ka Safar"
+        data-artist="Night Highway"
+        data-file="songs/song4.mp3"
+      >
+        <span>04</span>
+        <strong>Raat Ka Safar</strong>
+        <small>NIGHT DRIVE</small>
+      </button>
+
+
+      <button
+        class="song"
+        data-song="Purani Cassette"
+        data-artist="90s Road Collection"
+        data-file="songs/song5.mp3"
+      >
+        <span>05</span>
+        <strong>Purani Cassette</strong>
+        <small>90s MIX</small>
+      </button>
+
+    </div>
+
+    <p class="music-note">
+      🎵 Apne legally-owned / licensed MP3 files ko
+      <b>songs</b> folder mein rakho.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CATEGORY STRIP ================= -->
+
+<section class="categories">
+
+  <div class="category">
+    <span>🚛</span>
+    <strong>TRUCK LIFE</strong>
+    <small>ROAD STORIES</small>
+  </div>
+
+  <div class="category">
+    <span>📻</span>
+    <strong>CASSETTE</strong>
+    <small>90s MUSIC</small>
+  </div>
+
+  <div class="category">
+    <span>🛣️</span>
+    <strong>HIGHWAY</strong>
+    <small>LONG DRIVES</small>
+  </div>
+
+  <div class="category">
+    <span>☕</span>
+    <strong>DHABA</strong>
+    <small>CHAI & FOOD</small>
+  </div>
+
+</section>
+
+
+<!-- ================= DHABA ================= -->
+
+<section class="section dhaba" id="dhaba">
+
+  <div class="dhaba-image">
+
+    <img
+      src="dhaba.jpg"
+      alt="Indian highway dhaba"
+    >
+
+  </div>
+
+  <div class="dhaba-content">
+
+    <p>HIGHWAY STOP</p>
+
+    <h2>
+      EK CUP CHAI
+      <span>AUR EK LAMBA SAFAR.</span>
+    </h2>
+
+    <div class="line"></div>
+
+    <p class="description">
+      Jab truck side mein rukta hai,
+      engine thoda thanda hota hai,
+      aur driver ke haath mein garam chai hoti hai —
+      wahi asli highway life hai.
+    </p>
+
+    <div class="dhaba-stats">
+
+      <div>
+        <strong>24/7</strong>
+        <span>HIGHWAY</span>
+      </div>
+
+      <div>
+        <strong>90s</strong>
+        <span>VIBES</span>
+      </div>
+
+      <div>
+        <strong>∞</strong>
+        <span>MILES</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="about-inner">
+
+    <p>THIS IS NOT JUST A WEBSITE.</p>
+
+    <h2>
+      THIS IS THE
+      <span>HIGHWAY.</span>
+    </h2>
+
+    <p class="about-text">
+      Indian trucking culture ka woh era,
+      jahan har truck ek moving artwork tha,
+      har cabin mein music bajta tha,
+      aur har highway ki apni ek kahani thi.
+    </p>
+
+    <div class="horn">
+      HORN
+      <span>OK</span>
+      PLEASE
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    🚛 DESI TRUCKERS
+  </div>
+
+  <p>
+    BUILT FOR THE LOVE OF INDIAN HIGHWAYS.
+  </p>
+
+  <div class="footer-bottom">
+    © 2026 DESI TRUCKERS • ROAD NEVER ENDS.
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
