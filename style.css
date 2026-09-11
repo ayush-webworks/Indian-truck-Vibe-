@@ -1,1 +1,1154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #15110c;
+  color: #f5e6c8;
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= VARIABLES ================= */
+
+:root {
+  --cream: #f5e6c8;
+  --yellow: #f2b632;
+  --red: #c83b24;
+  --dark-red: #701c15;
+  --black: #15110c;
+  --brown: #3b2415;
+  --green: #39452b;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(21, 17, 12, 0.94);
+
+  border-bottom: 2px solid var(--yellow);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  color: var(--yellow);
+  letter-spacing: 2px;
+}
+
+.logo span {
+  margin-right: 7px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--yellow);
+  font-size: 28px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 7% 70px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(21,17,12,.96) 0%,
+      rgba(21,17,12,.78) 42%,
+      rgba(21,17,12,.20) 100%
+    ),
+    url("truck-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+
+  animation: heroIn 1s ease forwards;
+}
+
+.truck-sign {
+  display: inline-block;
+
+  background: var(--yellow);
+  color: #111;
+
+  padding: 8px 18px;
+
+  font-family: "Permanent Marker", cursive;
+
+  transform: rotate(-2deg);
+
+  margin-bottom: 20px;
+}
+
+.small-title {
+  color: var(--yellow);
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(90px, 13vw, 190px);
+
+  line-height: .72;
+
+  margin: 25px 0;
+
+  letter-spacing: 2px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero h1 strong {
+  color: var(--yellow);
+  display: block;
+  font-weight: normal;
+
+  text-shadow:
+    5px 5px 0 var(--red);
+}
+
+.hero-text {
+  max-width: 520px;
+
+  font-size: 19px;
+  line-height: 1.6;
+
+  color: #e4d5ba;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  text-decoration: none;
+
+  padding: 15px 24px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  transition: .3s;
+
+  display: inline-block;
+}
+
+.primary {
+  background: var(--yellow);
+  color: #17110b;
+}
+
+.secondary {
+  border: 2px solid var(--cream);
+  color: var(--cream);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.primary:hover {
+  background: var(--red);
+  color: white;
+}
+
+.secondary:hover {
+  background: var(--cream);
+  color: #111;
+}
+
+.hero-truck {
+  display: none;
+}
+
+/* ================= ROAD STRIP ================= */
+
+.road-strip {
+  min-height: 62px;
+
+  background: var(--red);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 20px;
+
+  padding: 12px 5%;
+
+  overflow: hidden;
+
+  border-top: 4px solid var(--yellow);
+  border-bottom: 4px solid var(--yellow);
+
+  font-family: "Permanent Marker", cursive;
+
+  font-size: 14px;
+}
+
+.road-strip div {
+  white-space: nowrap;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 110px 7%;
+}
+
+.section-heading {
+  margin-bottom: 55px;
+}
+
+.section-heading p {
+  color: var(--yellow);
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  font-size: 13px;
+}
+
+.section-heading h2 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(55px, 8vw, 105px);
+
+  line-height: .85;
+
+  margin-top: 15px;
+}
+
+.section-heading h2 span {
+  display: block;
+  color: var(--yellow);
+}
+
+.line {
+  width: 100px;
+  height: 7px;
+
+  margin-top: 25px;
+
+  background: var(--red);
+}
+
+/* ================= TRUCK GRID ================= */
+
+.truck-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.truck-card {
+  background: #21180f;
+
+  border: 2px solid #5e4529;
+
+  transition: .4s;
+
+  overflow: hidden;
+}
+
+.truck-card:hover {
+  transform: translateY(-12px) rotate(-1deg);
+
+  border-color: var(--yellow);
+
+  box-shadow: 10px 10px 0 var(--red);
+}
+
+.card-image {
+  height: 310px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: saturate(.85) contrast(1.08);
+
+  transition: .5s;
+}
+
+.truck-card:hover img {
+  transform: scale(1.08);
+}
+
+.card-image span {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  width: 48px;
+  height: 48px;
+
+  background: var(--yellow);
+  color: #111;
+
+  display: grid;
+  place-items: center;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 25px;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  color: var(--yellow);
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 35px;
+
+  letter-spacing: 1px;
+}
+
+.card-content p {
+  margin-top: 10px;
+
+  color: #cbbda5;
+
+  line-height: 1.6;
+}
+
+/* ================= MUSIC ================= */
+
+.music-section {
+  padding: 110px 7%;
+
+  background:
+    linear-gradient(
+      rgba(50, 28, 13, .88),
+      rgba(50, 28, 13, .88)
+    ),
+    url("truck-cassette.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border-top: 5px solid var(--yellow);
+  border-bottom: 5px solid var(--yellow);
+}
+
+.music-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cassette-player {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  background: rgba(20, 13, 8, .88);
+
+  border: 3px solid var(--yellow);
+
+  padding: 45px;
+}
+
+/* ================= CASSETTE ================= */
+
+.cassette {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 1.55;
+
+  background: #e1c76f;
+
+  border: 10px solid #282018;
+
+  box-shadow:
+    0 15px 0 #0d0905;
+
+  margin: auto;
+
+  transform: rotate(-3deg);
+
+  animation: cassetteFloat 4s ease-in-out infinite;
+}
+
+.cassette-label {
+  position: absolute;
+
+  top: 25%;
+  left: 10%;
+
+  width: 80%;
+
+  padding: 18px;
+
+  background: var(--red);
+
+  color: white;
+
+  text-align: center;
+}
+
+.cassette-label small {
+  display: block;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+.cassette-label strong {
+  display: block;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 35px;
+}
+
+.cassette-label span {
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.reel {
+  position: absolute;
+
+  bottom: 17%;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #17120d;
+
+  border: 9px dotted #eee0ba;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 20px;
+}
+
+.reel-left {
+  left: 13%;
+}
+
+.reel-right {
+  right: 13%;
+}
+
+/* ================= PLAYER ================= */
+
+.now-playing {
+  color: var(--yellow);
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.player-info h3 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 55px;
+
+  margin: 10px 0 0;
+}
+
+.player-info > p:not(.now-playing) {
+  color: #cbbda5;
+}
+
+#audioPlayer {
+  width: 100%;
+
+  margin-top: 25px;
+}
+
+.player-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 20px;
+}
+
+.player-buttons button {
+  width: 50px;
+  height: 50px;
+
+  border: 2px solid var(--yellow);
+
+  background: transparent;
+
+  color: var(--yellow);
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: .3s;
+}
+
+.player-buttons button:hover,
+.player-buttons .play {
+  background: var(--yellow);
+  color: #111;
+}
+
+/* ================= PLAYLIST ================= */
+
+.playlist {
+  margin-top: 35px;
+
+  display: grid;
+
+  gap: 10px;
+}
+
+.song {
+  width: 100%;
+
+  border: 1px solid #665033;
+
+  background: rgba(15, 10, 6, .85);
+
+  color: var(--cream);
+
+  padding: 17px 20px;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr 130px;
+
+  align-items: center;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.song span {
+  color: var(--yellow);
+}
+
+.song strong {
+  font-size: 17px;
+}
+
+.song small {
+  text-align: right;
+  color: #a89578;
+}
+
+.song:hover,
+.song.active {
+  background: var(--red);
+
+  border-color: var(--yellow);
+
+  transform: translateX(8px);
+}
+
+.music-note {
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #bca98c;
+
+  font-size: 13px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-bottom: 2px solid var(--yellow);
+}
+
+.category {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background: var(--brown);
+
+  border-right: 1px solid #80633c;
+
+  transition: .3s;
+}
+
+.category:hover {
+  background: var(--red);
+
+  transform: translateY(-5px);
+}
+
+.category span {
+  display: block;
+
+  font-size: 35px;
+
+  margin-bottom: 10px;
+}
+
+.category strong {
+  display: block;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  color: var(--yellow);
+
+  font-size: 27px;
+}
+
+.category small {
+  color: #c5b393;
+
+  letter-spacing: 2px;
+}
+
+/* ================= DHABA ================= */
+
+.dhaba {
+  display: grid;
+
+  grid-template-columns: 1.1fr .9fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.dhaba-image {
+  height: 550px;
+
+  border: 8px solid var(--yellow);
+
+  overflow: hidden;
+
+  box-shadow: 15px 15px 0 var(--red);
+}
+
+.dhaba-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: .6s;
+}
+
+.dhaba-image:hover img {
+  transform: scale(1.06);
+}
+
+.dhaba-content > p:first-child {
+  color: var(--yellow);
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+.dhaba-content h2 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  line-height: .85;
+
+  margin-top: 20px;
+}
+
+.dhaba-content h2 span {
+  display: block;
+
+  color: var(--yellow);
+}
+
+.description {
+  max-width: 500px;
+
+  color: #c9b99b;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  margin-top: 25px;
+}
+
+.dhaba-stats {
+  display: flex;
+
+  gap: 40px;
+
+  margin-top: 35px;
+}
+
+.dhaba-stats strong {
+  display: block;
+
+  color: var(--yellow);
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 45px;
+}
+
+.dhaba-stats span {
+  color: #a99677;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 130px 7%;
+
+  text-align: center;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #3b2415,
+      #3b2415 10px,
+      #422917 10px,
+      #422917 20px
+    );
+
+  border-top: 5px solid var(--yellow);
+}
+
+.about-inner {
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.about-inner > p:first-child {
+  color: var(--yellow);
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+.about h2 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(70px, 10vw, 140px);
+
+  line-height: .8;
+
+  margin: 25px 0;
+}
+
+.about h2 span {
+  color: var(--yellow);
+
+  display: block;
+
+  text-shadow: 5px 5px var(--red);
+}
+
+.about-text {
+  max-width: 700px;
+
+  margin: auto;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+
+  color: #dfceb0;
+}
+
+.horn {
+  display: inline-block;
+
+  margin-top: 45px;
+
+  padding: 15px 25px;
+
+  border: 4px solid var(--yellow);
+
+  background: var(--red);
+
+  font-family: "Permanent Marker", cursive;
+
+  font-size: 22px;
+
+  transform: rotate(-3deg);
+}
+
+.horn span {
+  color: var(--yellow);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 55px 7% 25px;
+
+  text-align: center;
+
+  background: #0e0a06;
+}
+
+.footer-logo {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 35px;
+
+  color: var(--yellow);
+
+  letter-spacing: 2px;
+}
+
+footer p {
+  margin-top: 10px;
+
+  color: #99886e;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+.footer-bottom {
+  margin-top: 35px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #443525;
+
+  color: #6e604e;
+
+  font-size: 11px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes heroIn {
+
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes cassetteFloat {
+
+  0%, 100% {
+    transform: rotate(-3deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(1deg) translateY(-10px);
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  nav {
+    position: absolute;
+
+    top: 76px;
+    right: 0;
+
+    width: 100%;
+
+    padding: 25px;
+
+    background: #15110c;
+
+    border-bottom: 2px solid var(--yellow);
+
+    display: none;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 22px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    min-height: 850px;
+
+    padding: 130px 7% 60px;
+
+    align-items: flex-start;
+
+    background-position: 65% center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(85px, 23vw, 150px);
+  }
+
+  .hero-text {
+    max-width: 450px;
+  }
+
+  .truck-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cassette-player {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dhaba {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .dhaba-image {
+    height: 400px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hero {
+    min-height: 780px;
+  }
+
+  .small-title {
+    font-size: 10px;
+  }
+
+  .truck-sign {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 90px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    max-width: 260px;
+  }
+
+  .road-strip {
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    font-size: 12px;
+  }
+
+  .section,
+  .music-section {
+    padding: 80px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 65px;
+  }
+
+  .card-image {
+    height: 250px;
+  }
+
+  .cassette-player {
+    padding: 18px;
+  }
+
+  .cassette-label strong {
+    font-size: 27px;
+  }
+
+  .reel {
+    width: 50px;
+    height: 50px;
+  }
+
+  .player-info h3 {
+    font-size: 42px;
+  }
+
+  .song {
+    grid-template-columns: 35px 1fr;
+
+    gap: 5px;
+  }
+
+  .song small {
+    display: none;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category {
+    padding: 25px 10px;
+  }
+
+  .dhaba {
+    padding: 80px 5%;
+  }
+
+  .dhaba-image {
+    height: 300px;
+
+    box-shadow: 9px 9px 0 var(--red);
+  }
+
+  .dhaba-content h2 {
+    font-size: 65px;
+  }
+
+  .dhaba-stats {
+    gap: 20px;
+  }
+
+  .about {
+    padding: 90px 5%;
+  }
+
+}
