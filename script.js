@@ -183,3 +183,36 @@ musicBtn.addEventListener("click", () => {
     }
 
 });
+
+
+const music = document.getElementById("truckMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+if (music && musicBtn) {
+
+    musicBtn.addEventListener("click", function () {
+
+        if (music.paused) {
+
+            music.play()
+                .then(() => {
+                    musicBtn.textContent = "⏸ PAUSE MUSIC";
+                    musicBtn.classList.add("playing");
+                })
+                .catch((error) => {
+                    console.log("Music error:", error);
+                    alert("Music file load nahi ho rahi. music.mp3 ka naam check karo.");
+                });
+
+        } else {
+
+            music.pause();
+
+            musicBtn.textContent = "🎵 PLAY MUSIC";
+            musicBtn.classList.remove("playing");
+
+        }
+
+    });
+
+}
